@@ -12,16 +12,13 @@ console.log(process.env);
 const config = {
   context: paths.src, // базовая директория для точек входа и загрузчиков
   entry: {
-    bidv:
-      process.env.NODE_ENV === "production"
-        ? ["@babel/polyfill", "./build"]
-        : ["@babel/polyfill", "./main"]
+    bidv: ["@babel/polyfill", "./main"]
   },
   output: {
     path: paths.dist, // путь для результатов сборки
-    filename: "[name].bundle.js" // название итогового бандла, получится dist/obdvc.bundle.js
-    // library: "bidv",
-    // libraryTarget: "var"
+    filename: "[name].bundle.js", // название итогового бандла, получится dist/obdvc.bundle.js
+    library: "bidv",
+    libraryTarget: "var"
   },
   module: {
     rules: [

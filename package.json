@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "webpack-dev-server --mode development -w",
-    "build": "set NODE_ENV=production&&webpack --mode production"
+    "build": "set NODE_ENV=production&&webpack --mode production -w"
   },
   "author": "",
   "license": "ISC",
