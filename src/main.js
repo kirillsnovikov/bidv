@@ -1,6 +1,7 @@
 // import { SOAPClientParameters } from "./lib/soapclient";
 // import { SOAPClient } from "./lib/soapclient";
 import { xml2js } from 'xml-js';
+import style from './assets/scss/main.css';
 // import { getCookie, random } from './helpers/helper';
 // import { waterChart } from './lib/charts';
 
@@ -9,6 +10,8 @@ import { xml2js } from 'xml-js';
 // let sessionID = getCookie('JSESSIONID')
 //   ? sessionID
 //   : '6igrejiq0pho3srrpamlq2q6eq4ln1c224aprl3lr1co9eu6';
+console.log(style);
+$('body').append($('<div/>', { class: style.test }));
 
 var sr = `<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:v12=\"urn://oracle.bi.webservices/v12\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <v12:impersonate>\r\n         <v12:name>SoapUser</v12:name>\r\n         <v12:password>SoapUser1</v12:password>\r\n         <v12:impersonateID>test_DRPK</v12:impersonateID>\r\n      </v12:impersonate>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>`;
 
